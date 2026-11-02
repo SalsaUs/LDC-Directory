@@ -1,5 +1,7 @@
 # Land Development Consultants website
 
+**Live site:** [https://salsaus.github.io/LDC-Directory/](https://salsaus.github.io/LDC-Directory/)
+
 Static site (HTML, CSS, JS). No build step.
 
 ## Publish on GitHub Pages
