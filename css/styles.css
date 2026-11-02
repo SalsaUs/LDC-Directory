@@ -4,8 +4,8 @@
    emblem), cool grey tint. Edit the variables to rebrand.
    ========================================================== */
 :root {
-  --navy: #a32d8b;       /* primary landing background*/
-  --navy-2: #1b3a57;     /* lighter navy for lines/hover */
+  --navy: #10253b;       /* Banner Background*/
+  --navy-2: #2d6da3;     /* lighter navy for lines/hover */
   --gold: #f0b429;       /* accent / buttons */
   --gold-dark: #d99a0b;
   --tint: #eaf0f5;       /* alt section background */
