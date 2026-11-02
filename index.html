@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Land Development Consultants | Surveyors &amp; Engineers in Victoria</title>
+  <meta name="description" content="Victorian company connecting you with licensed land surveyors and civil engineers for subdivisions, title re-establishment, easements, level surveys, town planning and more.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <!-- Fonts (falls back to system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ===== Header / navigation ===== -->
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="logo" href="#top" aria-label="Land Development Consultants home">
+        <img src="images/favicon.svg" alt="" width="32" height="32"> Land Development Consultants
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <a href="#services">What we do</a>
+        <a href="#how">How it works</a>
+        <a href="#who">Who we are</a>
+        <a href="#victoria">Victoria</a>
+        <a class="btn btn-small" href="#quote">Get matched</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero: headline + quick "get matched" form (Bark-style) ===== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>The right licensed professional for your land, found fast.</h1>
+          <p class="lead">Tell us about your block, boundary or development. We connect you with Victorian land surveyors and engineering firms who do exactly that work.</p>
+          <ul class="ticks">
+            <li>Free to enquire, no obligation</li>
+            <li>Licensed surveyors and engineers only</li>
+            <li>One enquiry, the right introductions</li>
+          </ul>
+        </div>
+
+        <!-- Form: js/main.js opens an email draft. Swap for Formspree etc. later (see README). -->
+        <form class="quote" id="quote" novalidate>
+          <h2>What do you need help with?</h2>
+          <label for="service">Service</label>
+          <select id="service" name="service" required>
+            <option value="">Choose a service…</option>
+            <option>Land subdivision (small to large)</option>
+            <option>Boundary marking / re-establishment / disputes</option>
+            <option>Easements (create or remove)</option>
+            <option>Title amendments</option>
+            <option>Feature and level surveys</option>
+            <option>Flood level survey</option>
+            <option>Building set-out</option>
+            <option>3D laser scanning</option>
+            <option>Aerial drone survey</option>
+            <option>Staged / multi-lot development</option>
+            <option>Town planning and permits</option>
+            <option>Retaining wall design</option>
+            <option>Driveway, roading and services layout</option>
+            <option>Geotechnical testing</option>
+            <option>Not sure – please advise</option>
+          </select>
+          <label for="suburb">Suburb or postcode</label>
+          <input id="suburb" name="suburb" type="text" autocomplete="postal-code" placeholder="e.g. Ballarat 3350" required>
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <label for="details">Tell us a little more (optional)</label>
+          <textarea id="details" name="details" rows="3"></textarea>
+          <button class="btn" type="submit">Get matched with a professional</button>
+          <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== What we do ===== -->
+    <section class="section" id="services">
+      <div class="wrap">
+        <h2 class="section-title">Surveying, engineering and development help in one place</h2>
+        <p class="section-intro">Not sure who you need? Start here. We know which discipline solves which problem, and who in Victoria is licensed to do it.</p>
+
+        <!-- Each .group is a label on the left and a list of services on the right -->
+        <div class="group">
+          <h3>Land surveying</h3>
+          <ul class="svc">
+            <li><strong>Land subdivisions</strong> from a simple two-lot split to large estates</li>
+            <li><strong>Boundary marking</strong>, title re-establishment and boundary disputes</li>
+            <li><strong>Easements</strong>: creation and removal</li>
+            <li><strong>Title amendments</strong></li>
+            <li><strong>Multi-staged developments</strong></li>
+            <li><strong>Feature and level surveys</strong></li>
+            <li><strong>Flood level surveys</strong></li>
+            <li><strong>Building set-outs</strong></li>
+            <li><strong>3D scanning</strong> and survey scanning</li>
+            <li><strong>Aerial drone surveys</strong></li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <h3>Engineering</h3>
+          <ul class="svc">
+            <li><strong>Retaining wall design</strong></li>
+            <li><strong>Roading and driveway design</strong> and services layout plans for consent</li>
+            <li><strong>Geotechnical testing</strong></li>
+            <li><strong>Stormwater and drainage</strong> concepts for approval</li>
+          </ul>
+        </div>
+
+        <div class="group">
+          <h3>Development support</h3>
+          <ul class="svc">
+            <li><strong>Town planning and permits</strong></li>
+            <li><strong>Project management</strong> from first idea to titles</li>
+            <li><strong>Investor solutions</strong>: feasibility and site-potential advice</li>
+            <li><strong>Other land development services</strong>: ask us, we will find the right person</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How it works (a genuine sequence, so numbered) ===== -->
+    <section class="section tint" id="how">
+      <div class="wrap">
+        <h2 class="section-title">How it works</h2>
+        <ol class="steps">
+          <li><h3>Tell us what you need</h3><p>Describe the job in a minute. Rough notes are fine.</p></li>
+          <li><h3>We find the right people</h3><p>We match your job to licensed surveyors and engineers who handle it regularly.</p></li>
+          <li><h3>You compare and choose</h3><p>Talk to them directly, compare quotes and go with who suits you.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Who we are ===== -->
+    <section class="section" id="who">
+      <div class="wrap split">
+        <div>
+          <h2 class="section-title">Who we are</h2>
+          <p class="big">15+ years across surveying and engineering.</p>
+        </div>
+        <div class="prose">
+          <p>We have worked on both sides of the land development process, in surveying and in civil engineering, across projects from single-lot title fixes to staged subdivisions.</p>
+          <p>That experience taught us one thing above all: the right licensed professional matters. In Australia, cadastral surveying and engineering sign-off are regulated for good reason. The wrong person can cost you months, a failed council or title submission, or a boundary you have to redo.</p>
+          <p>So we do not guess. We ask the right questions up front and point you to someone qualified for that specific job.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Victoria ===== -->
+    <section class="section victoria" id="victoria">
+      <div class="wrap split">
+        <div>
+          <h2 class="section-title">A Victorian company, built to make this easy</h2>
+        </div>
+        <div class="prose">
+          <p>We are based in Victoria and know how things work here: council planning schemes, water authority requirements, Land Use Victoria titles and the realities of regional and metropolitan sites.</p>
+          <p>You do not need to know whether you need a surveyor, an engineer or a planner first. Tell us your goal and we will take it from there.</p>
+          <a class="btn" href="#quote">Start your enquiry</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p><strong>Land Development Consultants</strong><br>Victoria, Australia</p>
+      <!-- TODO: replace with your real contact details -->
+      <p><a href="mailto:hello@example.com.au">hello@example.com.au</a><br>1300 000 000</p>
+      <p class="small">&copy; <span id="year">2026</span> Land Development Consultants. We introduce clients to independent licensed professionals.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
