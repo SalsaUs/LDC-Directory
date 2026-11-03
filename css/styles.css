@@ -4,7 +4,7 @@
    emblem), cool grey tint. Edit the variables to rebrand.
    ========================================================== */
 :root {
-  --navy: #10253b;       /* Banner Background*/
+  --navy: #14284B;       /* Banner Background*/
   --navy-2: #2d6da3;     /* lighter navy for lines/hover */
   --gold: #f0b429;       /* accent / buttons */
   --gold-dark: #d99a0b;
@@ -45,9 +45,9 @@ a { color: inherit; }
 .btn-small { padding: 8px 16px; }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--navy) url("../images/contours.svg") center / cover; color: #fff; padding: 64px 0 80px; position: relative; }
+.hero { background: var(--navy) url("../images/contours.svg") center / 120% auto; color: #fff; padding: 64px 0 80px; position: relative; }
 /* Contour lines are drawn white in the SVG; this overlay keeps them faint */
-.hero::before { content: ""; position: absolute; inset: 0; background: rgba(16, 37, 59, 0.9); }
+.hero::before { content: ""; position: absolute; inset: 0; background: rgba(37, 77, 121, 0.94); }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
 h1 { font: 800 clamp(2.2rem, 5vw, 3.6rem)/1.05 var(--font-head); margin: 0 0 20px; letter-spacing: -0.02em; }
 .lead { font-size: 1.2rem; max-width: 34em; color: #d6e1ea; }
@@ -83,9 +83,9 @@ h1 { font: 800 clamp(2.2rem, 5vw, 3.6rem)/1.05 var(--font-head); margin: 0 0 20p
 .steps h3 { font: 700 1.2rem var(--font-head); margin: 0 0 6px; }
 .steps p { margin: 0; color: var(--muted); }
 
-/* Two-column text sections */
+/* Who we are */
 .split { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; align-items: start; }
-.big { font: 700 1.6rem/1.25 var(--font-head); color: var(--navy-2); margin: 0; }
+.big { font: 700 1.6rem/1.25 var(--font-head); color: var(--gold); margin: 0; }
 .prose p { margin: 0 0 1em; max-width: 36em; }
 .victoria { background: var(--navy); color: #fff; }
 .victoria .btn { margin-top: 8px; }
