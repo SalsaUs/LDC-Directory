@@ -22,37 +22,44 @@ nav.addEventListener("click", (e) => {
 });
 
 // --- 2. Quote form --------------------------------------------------
-// GitHub Pages is static (no server), so we open the visitor's email app
-// with the details filled in. To receive enquiries directly instead,
-// replace this with a form service such as Formspree (see README.md).
-const RECEIVING_EMAIL = "hello@example.com.au"; // TODO: your real address
-
+// Sends the enquiry to Formspree, which emails it to you.
+// The form's action URL is set in index.html.
 const form = document.getElementById("quote");
 const msg = document.getElementById("form-msg");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const data = new FormData(form);
-  const service = data.get("service");
-  const suburb = (data.get("suburb") || "").trim();
   const email = (data.get("email") || "").trim();
-  const details = (data.get("details") || "").trim();
 
   // Basic checks with plain-language messages
-  if (!service || !suburb || !/^\S+@\S+\.\S+$/.test(email)) {
+  if (!data.get("service") || !(data.get("suburb") || "").trim() || !/^\S+@\S+\.\S+$/.test(email)) {
     msg.textContent = "Please choose a service and enter your suburb and a valid email.";
     msg.classList.add("error");
     return;
   }
   msg.classList.remove("error");
+  msg.textContent = "Sending…";
 
-  const subject = encodeURIComponent(`Enquiry: ${service} (${suburb})`);
-  const body = encodeURIComponent(
-    `Service: ${service}\nLocation: ${suburb}\nReply to: ${email}\n\n${details}`
-  );
-  window.location.href = `mailto:${RECEIVING_EMAIL}?subject=${subject}&body=${body}`;
-  msg.textContent = "Your email app should open with your enquiry. Just press send.";
+  try {
+    // Send the form data to Formspree in the background (no page reload)
+    const res = await fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" }
+    });
+    if (res.ok) {
+      form.reset();
+      msg.textContent = "Thanks! We've received your enquiry and will be in touch soon.";
+    } else {
+      throw new Error("Server error");
+    }
+  } catch (err) {
+    msg.textContent = "Sorry, something went wrong. Please try again in a moment.";
+    msg.classList.add("error");
+  }
 });
 
 // --- 3. Footer year -------------------------------------------------
 document.getElementById("year").textContent = new Date().getFullYear();
+
